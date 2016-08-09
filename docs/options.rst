@@ -62,7 +62,9 @@ SSL Certificates
 
 Turning SSL certificate verification off::
 
-    API("https://path/to/my/api", session=requests.Session(verify=False))
+    session = requests.Session()
+    session.verify = False
+    API("https://path/to/my/api", session=session)
 
 For more information see the documentation for ``requests.Session``.
 
